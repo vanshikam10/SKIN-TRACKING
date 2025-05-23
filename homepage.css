@@ -1,0 +1,71 @@
+/* Homepage Styling */
+.home-page {
+    background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+    font-family: 'Quicksand', sans-serif;
+    animation: fadeIn 2s ease-in;
+    color: #5e4b56;
+}
+
+.home-container {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero {
+    margin-top: 30px;
+}
+
+.lottie-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+.brand-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    color: #FF69B4;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ff7eb9;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff5fad;
+}
+
+.why-section {
+    background: white;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #aa7d9d;
+}

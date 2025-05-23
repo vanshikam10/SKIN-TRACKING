@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISHQ GLOW - Auth</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <div class="animation-container">
+        <dotlottie-player 
+          src="https://lottie.host/f1495474-b4ed-47ce-aefa-c27988592da5/IfomAxloOy.lottie" 
+          background="transparent" 
+          speed="1" 
+          style="width: 150px; height: 150px;" 
+          loop 
+          autoplay>
+        </dotlottie-player>
+      </div>
+      <h1>Welcome to ISHQ GLOW</h1>
+
+      <div class="form-toggle">
+        <button type="button" onclick="showForm('login')">Login</button>
+        <button type="button" onclick="showForm('signup')">Sign Up</button>
+        <button type="button" onclick="showForm('reset')">Forgot Password</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <div class="form-section" id="login-section">
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button onclick="loginUser()">Login</button>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div class="form-section" id="signup-section" style="display: none;">
+        <div class="input-container">
+          <i class="fa fa-user"></i>
+          <input type="text" id="signup-name" placeholder="Name" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" id="signup-email" placeholder="Email" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="signup-password" placeholder="Password" required>
+        </div>
+        <select id="signup-skin-type">
+          <option value="">Select Skin Type</option>
+          <option value="dry">Dry</option>
+          <option value="oily">Oily</option>
+          <option value="normal">Normal</option>
+          <option value="combination">Combination</option>
+        </select>
+        <button onclick="signupUser()">Sign Up</button>
+      </div>
+
+      <!-- FORGOT PASSWORD FORM -->
+      <div class="form-section" id="reset-section" style="display: none;">
+        <div class="input-container">
+          <i class="fa fa-envelope"></i>
+          <input type="email" id="reset-email" placeholder="Enter your email" required>
+        </div>
+        <button onclick="resetPassword()">Send Reset Link</button>
+      </div>
+
+      <div class="loading-spinner" style="display: none;">Loading...</div>
+    </div>
+  </div>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- ✅ Your Firebase Initialization -->
+  <script src="firebase.js"></script>
+
+  <!-- ✅ Your App Logic -->
+  <script src="login.js"></script>
+</body>
+</html>

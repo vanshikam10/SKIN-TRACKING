@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISHQ GLOW – Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>✨ Welcome Baby Girl ✨</h1>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard-grid">
+    <!-- Daily Routine Tracker -->
+    <section class="widget">
+      <h2>🌞 Morning Routine</h2>
+      <ul class="routine-checklist">
+        <label><input type="checkbox" /> Cleanser</label><br/>
+        <label><input type="checkbox" /> Toner</label><br/>  
+        <label><input type="checkbox" /> Serum</label> <br /> 
+        <label><input type="checkbox" /> Moisturizer</label><br/>
+        <label><input type="checkbox" /> Sunscreen</label><br/>
+      </ul>
+
+      <h2>🌙 Night Routine</h2>
+      <ul class="routine-checklist">
+        <label><input type="checkbox" /> Cleanser</label><br/>
+        <label><input type="checkbox" /> Toner</label><br/>   
+        <label><input type="checkbox" /> Moisturizer</label><br/>
+        <label><input type="checkbox" /> Night Cream </label><br/>
+      </ul>
+    </section>
+
+    <!-- Product Library -->
+    <section class="widget">
+      <h2>🧴 My Products</h2>
+      <div class="product-library">
+        <div class="product-card">Add Product +</div>
+      </div>
+    </section>
+
+    <section class="widget wide custom-calendar">
+      <h2>📅 Skincare Calendar</h2>
+      <div class="calendar-header">
+        <button onclick="prevMonth()">◀</button>
+        <h3 id="calendar-title">May 2025</h3>
+        <button onclick="nextMonth()">▶</button>
+      </div>
+    
+      <div class="calendar-grid-header">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div id="calendar-body" class="calendar-body"></div>
+    </section>
+    
+
+    <!-- Skin Goals -->
+    <section class="widget">
+      <h2>🎯 Skin Goals</h2>
+      <ul>
+        <li><input type="checkbox" /> Reduce dark circles</li>
+        <li><input type="checkbox" /> Heal acne</li>
+        <li><input type="checkbox" /> Even skin tone</li>
+      </ul>
+    </section>
+
+   <!-- Manifestation Tracker -->
+<section class="widget">
+  <h2>✨ Your Manifestations</h2>
+  <p>Write down your manifestation below and believe in it!</p>
+  
+  <form id="manifestation-form">
+    <textarea id="manifestation" placeholder="Write your manifestation here..." rows="4" required></textarea>
+    <button type="submit">Save Manifestation</button>
+  </form>
+  
+  <div id="saved-manifestations">
+    <h3>Saved Manifestations:</h3>
+    <ul id="manifestation-list">
+      <!-- Saved manifestations will appear here -->
+    </ul>
+  </div>
+</section>
+
+    <!-- DIY Recipes -->
+    <section class="widget">
+      <h2>🥣 DIY Recipes</h2>
+      <ul>
+        <li>Haldi + Chandan Mask</li>
+        <li>Coffee Scrub</li>
+        <li>Honey Lip Balm</li>
+      </ul>
+    </section>
+
+    <!-- Reminders -->
+    <section class="widget">
+      <h2>⏰ Reminders</h2>
+      <ul>
+        <li>Apply face mask at 8PM</li>
+        <li>Hair oiling on Friday</li>
+        <li>Replace sunscreen in 10 days</li>
+      </ul>
+    </section>
+
+    <!-- Suggestions -->
+    <section class="widget">
+      <h2>💡 Suggestions for You</h2>
+      <p>Try gel-based moisturizers for dry patches</p>
+      <p>Use aloe vera during period acne</p>
+    </section>
+
+  <!-- User Skin Profile -->
+<section class="widget">
+  <h2>🧬 Your Skin Profile</h2>
+
+  <label for="skinType">Skin Type:</label>
+  <select id="skinType">
+    <option value="">Select</option>
+    <option value="dry">Dry</option>
+    <option value="oily">Oily</option>
+    <option value="combination">Combination</option>
+    <option value="sensitive">Sensitive</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <label for="allergies">Allergies:</label>
+  <input type="text" id="allergies" placeholder="E.g., Fragrances, Parabens" />
+
+  <label for="concerns">Skincare Concerns:</label>
+  <input type="text" id="concerns" placeholder="E.g., Acne, Dark Circles" />
+</section>
+
+
+</main> <!-- This should come before footer -->
+<footer class="dashboard-footer">
+  Made with 💗 by Team ISHQ GLOW
+</footer>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

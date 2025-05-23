@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff9fb;
+  color: #4b4b4b;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #ffe4ed;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d63384;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Logout button */
+.logout-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 6px 14px;
+  background-color: #ff90b3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* space between the boxes */
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: #fff0f5; /* light pink background */
+  border: 2px solid #dcdcdc; /* soft border */
+  border-radius: 12px;
+  height: 200px; /* fixed height to keep it equal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Widget Cards */
+.widget {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(255, 173, 200, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease;
+  min-height: 200px;
+}
+
+.widget:hover {
+  transform: translateY(-4px);
+}
+
+/* Widget inner content */
+.widget h2 {
+  margin: 0 0 10px;
+  color: #ff6f91;
+  font-size: 1.3rem;
+}
+
+.widget ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.widget-content {
+  margin-top: 10px;
+  flex: 1;
+}
+
+/* Inputs */
+.widget textarea,
+.widget input[type="text"],
+.widget select {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+/* Product layout */
+.product-library {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: #ffe4ec;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1 1 120px;
+  cursor: pointer;
+}
+
+/* Calendar */
+.custom-calendar {
+  background-color: #fff0f5;
+  border-radius: 16px;
+  padding: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  box-shadow: 0 4px 10px rgba(255, 192, 203, 0.15);
+  width: 100%; /* Optional */
+  max-width: 320px; /* Fix width */
+  margin: auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.calendar-grid-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.calendar-grid-header div {
+  font-weight: bold;
+  color: #d63384;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-body div {
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.calendar-body div:hover {
+  background-color: #ffd6e8;
+}
+
+.calendar-body .today {
+  background-color: #ffcce6;
+  font-weight: bold;
+}
+
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffe9f0;
+  font-size: 0.9rem;
+  color: #b47794;
+}
